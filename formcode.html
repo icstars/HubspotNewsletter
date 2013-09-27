@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+.IngeniMailSubscribeContainer {
+background: #3CBBF2;
+color: #FFF;
+width: 533px;
+border-radius: 8px 8px 8px 8px;
+padding: 12px 16px 14px 16px;
+position: relative;
+}
+
+.pad .IngeniMailSubscribeContainer .subhead{
+float:left;
+}
+.IngeniMailSubscribeEmailInput{
+float:left;
+padding: 5px;
+}
+
+.IngeniMailSubscribeButton{
+background: #3CBBF2;
+color: rgb(255,255,255);
+border: 2px solid rgb(127,64,21);
+float:left;
+}
+div.pad
+{
+width:643px;
+background-image: url('arrow.png');
+background-repeat:no-repeat;
+background-position:100% 100%; 
+}
+div.pad h3
+{
+width:643px
+}
+
+#dnn__ctl1_ContentPane{
+/*opacity: 0;*/
+}
+</style>
+</head>
+<body>
+<div class="pad">
+<h3>Join Healthcare Innovators who receive a monthly newsletter on topics that enable faster, safer, and more relevant software products to market.
+</h3>
+<div id="dnn__ctl1_ContentPane">
+
+<style>
+   #NoGroupWarning {
+     display: none;
+     color: red;
+   }
+</style>
+
+<div class="IngeniMailSubscribeContainer" id="IngeniMailSubscribeContainer_2162613" align="center">
+   <div style="margin-bottom: 8px;">
+	 <span class="subhead">Your email:</span>
+	 <input class="IngeniMailSubscribeEmailInput" type="text" size="20" id="IngeniMailSubscribeEmailInput_2162613" value=""> 
+   </div>
+   <input class="IngeniMailSubscribeButton" type="button" value="Subscribe" onclick="MailSubValidateSubmit_2162613();">
+   <div id="MailSubscribeError_2162613" align="left" class="normalred"></div>
+</div>
+
+<script type="text/javascript">
+function MailSubValidateSubmit_2162613()
+{
+    
+	document.getElementById('MailSubscribeError_2162613').innerHTML = '';
+	var inputId = 'IngeniMailSubscribeEmailInput_2162613';
+
+	var Input = document.getElementById(inputId);
+	var val = '' + Input.value;
+	var rx = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/ig;
+	var matches = rx.exec(val);
+
+	if (matches != null && val == matches[0]) {
+		MailSubscribe.MailSubscribeClick(2162613,995809);
+	}
+	else {
+		document.getElementById('MailSubscribeError_2162613').innerHTML = 'Invalid email';
+	}
+}
+
+function MailSubUnsubscribe(email)
+{
+	var Container = document.getElementById('IngeniMailSubscribeContainer_2162613');
+	Container.innerHTML = "<input id='IngeniMailSubscribeEmailInput_2162613' type='hidden' value='" + email + "'/>";
+	MailSubscribe.MailSubscribeClick(2162613,995809);
+}
+</script></div>
+</div>
+</body>
+</html>
