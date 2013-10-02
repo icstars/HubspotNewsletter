@@ -1,44 +1,87 @@
 <html>
 <head>
 <style>
+h3{
+color: #3CBBF2;
+font: normal 22px calibri;
+height: 35px;
+}
+
 .IngeniMailSubscribeContainer {
 background: #3CBBF2;
-color: #FFF;
-width: 533px;
-border-radius: 8px 8px 8px 8px;
-padding: 12px 16px 14px 16px;
+color: #F0EEEE;
+font: 20px calibri;
+width: 650px;
 position: relative;
+
+/* IE10 Consumer Preview */ 
+background-image: -ms-radial-gradient(center, ellipse farthest-corner, #00A3EF 50%, #00537A 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, ellipse farthest-corner, #00A3EF 50%, #00537A 100%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(center, ellipse farthest-corner, #00A3EF 50%, #00537A 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 506, color-stop(.5, #00A3EF), color-stop(1, #00537A));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #00A3EF 50%, #00537A 100%);
+
+/* W3C Markup, IE10 Release Preview */ 
+background-image: radial-gradient(ellipse farthest-corner at center, #00A3EF 50%, #00537A 100%);
 }
 
 .pad .IngeniMailSubscribeContainer .subhead{
 float:left;
+width:120px;
+height:40px;
+margin:10px;
 }
 .IngeniMailSubscribeEmailInput{
 float:left;
 padding: 5px;
+width:370px;
+margin: 10px;
 }
 
 .IngeniMailSubscribeButton{
-background: #3CBBF2;
-color: rgb(255,255,255);
-border: 2px solid rgb(127,64,21);
-float:left;
+background-image: url('subscribe120x50.jpg');
+color:#F0EEEE;
+font:20px calibri;
+width: 120px;
+height: 50px;
+border: none;
+outline: none;
 }
 div.pad
 {
-width:643px;
+width:700px;
+
 background-image: url('arrow.png');
 background-repeat:no-repeat;
 background-position:100% 100%; 
+
 }
 div.pad h3
 {
-width:643px
+width:675px
 }
 
 #dnn__ctl1_ContentPane{
+width: 700px;
 /*opacity: 0;*/
 }
+
+#MailSubscribeError_2162613{
+color: #CC0000;
+font-weight:bold;
+float: right;
+
+
+}
+
 </style>
 </head>
 <body>
